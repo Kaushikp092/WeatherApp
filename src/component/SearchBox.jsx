@@ -32,7 +32,7 @@ const SearchBox = ({ updateInfo }) => {
             tempMin: jsonResponse.main.temp_min,
             humidity: jsonResponse.main.humidity,
             feelsLike: jsonResponse.main.feels_like,
-            weather: jsonResponse.weather[0].description
+            weather: jsonResponse.weather[0].description,
          };
          console.log(result);
          return result;
@@ -60,12 +60,31 @@ const SearchBox = ({ updateInfo }) => {
       <div className="SearchBox">
          <form onSubmit={handleSubmit}>
             <TextField
+               sx={{
+                  "& .MuiOutlinedInput-root": {
+                     "&:hover fieldset": {
+                        borderColor: "white",
+                        borderRadius: "10px",
+                     },
+                     "&.Mui-focused fieldset": {
+                        borderColor: "#78dbf6",
+                        borderRadius: "10px",
+                     },
+                  },
+                  "& .MuiInputLabel-root": { color: "black" },
+                  "& .MuiInputLabel-root.Mui-focused": { color: "white" },
+               }}
                id="city"
                label="City Name"
                variant="outlined"
                required
                value={city}
                onChange={handleChange}
+               style={{
+                  backgroundColor: "#448FA3",
+                  borderRadius: "10px",
+                  color: "black",
+               }}
             />
             <br />
             <br />

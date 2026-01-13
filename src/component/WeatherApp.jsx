@@ -19,7 +19,7 @@ const WeatherApp = () => {
 
   return (
     <div style={{textAlign: 'center'}}>
-      <h2>Weather App</h2>
+      <h1 style={{color: '#68C5DB'}}>Weather App</h1>
       <SearchBox updateInfo={updateInfo}/>
       <InfoBox info={weatherInfo}/>
     </div>
