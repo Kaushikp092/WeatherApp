@@ -1,10 +1,10 @@
-// import './App.css'
-import SearchBox from './component/SearchBox'
+import './App.css'
+import WeatherApp from './component/WeatherApp'
 
 function App(){
   return(
     <>
-    <SearchBox />
+    <WeatherApp />
     </>
   )
 }
