@@ -8,9 +8,9 @@ const SearchBox = ({ updateInfo }) => {
    const [error, setError] = useState(false);
 
    //api url from openweather api
-   const API_URL = "https://api.openweathermap.org/data/2.5/weather";
+   const API_URL = import.meta.env.VITE_API_URL;
    //personal api key from openweather api
-   const API_KEY = "2c30bad4a3ae7696d62f0777d3d165bd";
+   const API_KEY = import.meta.env.VITE_API_KEY;
 
    // using async await for calling api bcoz it may take time to fetch data
    const getWeatherInfo = async () => {
